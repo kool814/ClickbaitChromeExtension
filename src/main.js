@@ -1,5 +1,3 @@
-function greeter(word) {
-    return "Hello, " + word;
+function hello(){
+    alert("Hello World!");
 }
-var userWord = "World";
-document.body.innerHTML = greeter(userWord);
