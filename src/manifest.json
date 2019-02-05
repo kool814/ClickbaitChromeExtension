@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Click-Bait-Blocker",
+    "description": "Chrome Extension to filter websites and provide warnings for possible sites t    hat contain clickbait",
+    "version": "1",
+    "author": "Jake Prins",
+
+
+    "browser_action": {
+        "default_icon": "ClickBaitLogo.png",
+         "default_popup": "popup.html"
+    },
+ 
+
+    "chrome_url_overrides": {
+       
+    },
+
+    "permissions": ["activeTab"]
+
+}
+
+
