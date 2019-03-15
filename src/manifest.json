@@ -1,23 +1,23 @@
 {
-    "manifest_version": 2,
-    "name": "Click-Bait-Blocker",
-    "description": "Chrome Extension to filter websites and provide warnings for possible sites t    hat contain clickbait",
-    "version": "1",
-    "author": "Jake Prins",
+  "name": "Get pages source",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Get pages source from a popup",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
 
 
-    "browser_action": {
+  "browser_action": {
         "default_icon": "ClickBaitLogo.png",
          "default_popup": "popup.html"
-    },
- 
+  },
 
-    "chrome_url_overrides": {
-       
-    },
 
-    "permissions": ["activeTab"]
-
+  "permissions": ["tabs", "<all_urls>"]
 }
+
+ 
 
 
