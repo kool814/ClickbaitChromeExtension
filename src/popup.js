@@ -1,22 +1,20 @@
-chrome.runtime.onMessage.addListener(function(request, sender) {
-  if (request.action == "getSource") {
-    message.innerText = request.source;
-  }
-});
+var callback = function (results) {
+    // ToDo: Do something with the image urls (found in results[0])
 
-function onWindowLoad() {
+    document.body.innerHTML = '';
+    for (var i in results[0]) {
+        var img = document.createElement('img');
+        img.src = results[0][i];
 
-  var message = document.querySelector('#message');
-
-  chrome.tabs.executeScript(null, {
-    file: "getPagesSource.js"
-  }, function() {
-    // If you try and inject into an extensions page or the webstore/NTP you'll get an error
-    if (chrome.runtime.lastError) {
-      message.innerText = 'There was an error injecting script : \n' + chrome.runtime.lastError.message;
+        document.body.appendChild(img);
     }
-  });
+};
 
-}
-
-window.onload = onWindowLoad;
+chrome.tabs.query({ // Get active tab
+    active: true,
+    currentWindow: true
+}, function (tabs) {
+    chrome.tabs.executeScript(tabs[0].id, {
+        code: 'Array.prototype.map.call(document.images, function (i) { return i.src; });'
+    }, callback);
+});

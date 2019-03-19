@@ -1,16 +1,16 @@
 html{
     margin: 7px;
     display: block;
-
 }
 
 .body{
-    height: 200px;
-    width: 150px;
+    height: 2000px; 
+    width: 2000px;
     text-align: center;
 }
-.scanButton{
-}
+
+.scanButton{}
+
 .background{
     background: rgba(255, 0, 0, .5);
     height: 100%;
