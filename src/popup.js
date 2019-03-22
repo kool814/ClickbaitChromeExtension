@@ -1,12 +1,18 @@
 var callback = function (results) {
     // ToDo: Do something with the image urls (found in results[0])
-
-    document.body.innerHTML = '';
-    for (var i in results[0]) {
-        var img = document.createElement('img');
-        img.src = results[0][i];
-
-        document.body.appendChild(img);
+    
+    if(results.length > 0){
+        document.body.innerHTML = 'HERE ARE THE LINKS\n';
+        for (var i in results[0]) {
+            var div = document.createElement('div');
+            var a = document.createElement('a');
+            var linkText = document.createTextNode(results[0][i]);
+            a.appendChild(linkText);
+            a.title = "Link" + i;
+            a.href = results[0][i];
+            div.appendChild(a);
+            document.body.appendChild(div);
+        }
     }
 };
 
