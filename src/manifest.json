@@ -8,6 +8,15 @@
     "default_popup": "popup.html"
   },
 
+"content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "css": ["contentscript.css"],
+      "js": ["contentscript.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }],
+
 
   "browser_action": {
         "default_icon": "ClickBaitLogo.png",
@@ -16,6 +25,7 @@
 
 
   "permissions": ["tabs", "<all_urls>"]
+
 }
 
  
