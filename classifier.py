@@ -1,11 +1,8 @@
 import glob
 import json
 import numpy
-import sys
-import nltk
 from itertools import imap
 from operator import itemgetter
-from random import shuffle
 from sklearn import metrics
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB

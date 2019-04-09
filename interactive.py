@@ -13,9 +13,9 @@ while True:
 	classifiedProb = classifier.classifyArticle(articleTitle)
 	newsOrClickBait = ""
 	if classifiedProb['clickbait'] >= 0.5:
-		newsOrClickBait = 'clickbait'
+		newsOrClickBait = '**CLICKBAIT**'
 	else:
-		newsOrClickBait = 'news'
+		newsOrClickBait = 'NEWS'
 
 	print ("""({:.3f}% clickbait, {:.3f}% news) -> Article classified as {}""".format(
 		classifiedProb['clickbait'] * 100, 
