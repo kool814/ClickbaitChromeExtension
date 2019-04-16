@@ -4,15 +4,9 @@ html{
 }
 
 .body{
-    height: 2000px; 
-    width: 2000px;
+    height: 200px; 
+    width: 200px;
     text-align: center;
-}
-
-.scanButton{}
-
-.background{
     background: rgba(255, 0, 0, .5);
-    height: 100%;
-    padding: 6px;
 }
+
