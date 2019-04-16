@@ -7,13 +7,14 @@ while True:
 	try:
 		articleTitle = raw_input('\nArticle title: ').strip().decode('utf-8')
 		if articleTitle == 'quit' or articleTitle == 'q' or articleTitle == '\q':
+			print ('\nGracefully quitting...\n')
 			break
 	except:
 		break
 	classifiedProb = classifier.classifyArticle(articleTitle)
 	newsOrClickBait = ""
 	if classifiedProb['clickbait'] >= 0.5:
-		newsOrClickBait = '**CLICKBAIT**'
+		newsOrClickBait = 'CLICKBAIT'
 	else:
 		newsOrClickBait = 'NEWS'
 
