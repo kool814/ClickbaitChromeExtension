@@ -1,0 +1,17 @@
+Welcome to our clickbait chrome extension
+
+We're two developers that were tired of falling for clickbait news articles on Facebook, Youtube, and news outlets.
+
+We decided to create a chrome extension that would detect if the current article is clickabait
+based on ml model we created that was trained on many clickbait news titles.
+
+Currently we are still developing the extension, but to see the backend model in action see below!
+
+To run this application on the command line locally:
+-Install this repo locally
+-Install python3, numpy, sklearn (can use pip install for all these packages)
+-Run the interactive.py file (python3 interactive.py) on the command line
+-Wait for ~15-20 secs as the model trains then enter an article title and press enter
+    (ex. "10 ways your astrological symbol dicates your life's meaning!")
+-Watch as the model classifies the article as clickbait or news
+-to quit press q, quit, ctr^c
